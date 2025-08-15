@@ -1,0 +1,147 @@
+{
+    "key": "group_document",
+    "title": "Documents",
+    "fields": [
+        {
+            "key": "field_685702400e8f2",
+            "label": "Featured Image",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_post_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "featured_image",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_685702400e8f8",
+            "label": "Category",
+            "name": "document_category",
+            "aria-label": "",
+            "type": "taxonomy",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "taxonomy": "document_category",
+            "add_term": 0,
+            "save_terms": 1,
+            "load_terms": 1,
+            "return_format": "id",
+            "field_type": "checkbox",
+            "min": "",
+            "max": "",
+            "acfe_bidirectional": {
+                "acfe_bidirectional_enabled": "0"
+            },
+            "allow_in_bindings": 0,
+            "bidirectional": 0,
+            "multiple": 0,
+            "allow_null": 0,
+            "bidirectional_target": []
+        },
+        {
+            "key": "field_685705fddba87",
+            "label": "File",
+            "name": "document_file",
+            "aria-label": "",
+            "type": "file",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "uploader": "",
+            "return_format": "array",
+            "preview_style": "default",
+            "library": "all",
+            "upload_folder": "",
+            "button_label": "Add File",
+            "file_count": 1,
+            "multiple": 0,
+            "max": "",
+            "min_size": "",
+            "max_size": "",
+            "mime_types": "pdf",
+            "allow_in_bindings": 0,
+            "placeholder": "Select",
+            "stylised_button": 0,
+            "min": ""
+        },
+        {
+            "key": "field_6863e4645c360",
+            "label": "Description",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_post_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "content",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_6863e4d916167",
+            "label": "Slug",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_post_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "name",
+            "allow_in_bindings": 0
+        }
+    ],
+    "location": [
+        [
+            {
+                "param": "post_type",
+                "operator": "==",
+                "value": "document"
+            }
+        ]
+    ],
+    "menu_order": 0,
+    "position": "acf_after_title",
+    "style": "seamless",
+    "label_placement": "left",
+    "instruction_placement": "label",
+    "hide_on_screen": [
+        "permalink"
+    ],
+    "active": true,
+    "description": "",
+    "show_in_rest": 1,
+    "acfe_autosync": [
+        "json"
+    ],
+    "acfe_form": 0,
+    "acfe_display_title": "",
+    "acfe_meta": "",
+    "acfe_note": "",
+    "modified": 1751377140
+}

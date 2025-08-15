@@ -1,0 +1,309 @@
+// blocks - fix padding bottom in the last block //
+header ~ .elementor {
+    &[data-elementor-type="wp-page"],
+    &[data-elementor-type="single-page"] {
+        position: relative;
+        z-index: 100;
+
+        > .elementor-element {
+            &+.elementor-element:not(:last-of-type) {
+                // template //
+                > .elementor-widget {
+                    > .elementor-widget-container {
+                        > .elementor-template {
+                            > .elementor {
+                                > .elementor-element {
+                                   //padding-bottom: var(--gap-vertical-small);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+            &:last-of-type {
+                // template //
+                > .elementor-widget {
+                    > .elementor-widget-container {
+                        > .elementor-template {
+                            > .elementor {
+                                > .elementor-element {
+                                    //padding-bottom: var(--gap-vertical-x-large);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+// -- //
+
+// block - anchor intro //
+.block-anchor-intro {
+    --height-base: 1px;
+}
+
+// block - content //
+.block-content {
+    //border: 5px solid red;
+
+    .component-article {
+        //border: 5px solid red;
+    }
+
+    .component-sidebar {
+        //border: 5px solid red;
+    }
+
+    .component-loop-info {
+        //border: 5px solid red;
+
+        .component-item {
+            //border: 5px solid red;
+        }
+    }
+
+    &-2,
+    &-3 {
+        //border: 5px solid red;
+
+        .component-article {
+            //border: 5px solid red;
+        }
+
+        .elementor-widget-video {
+            .elementor-widget-container {
+                overflow: inherit;
+
+                video {
+                    border-radius: var(--border-radius-large);
+                }
+            }
+        }
+    }
+}
+
+// block - cta - documents //
+.block-cta-our-documents {
+}
+
+// block - cta - our locations //
+.block-cta-our-locations {
+}
+
+// block - cta - our products //
+.block-cta-our-products {
+}
+
+// block - cta - eirebloc //
+.block-cta-eirebloc {
+}
+
+// block - featured gallery //
+.block-featured-gallery {
+    --height-base: 3em;
+
+    .elementor-widget-image-carousel {
+        .elementor-image-carousel-wrapper {
+            overflow: hidden;
+            border-radius: var(--border-radius-x-large);
+
+            img {
+                aspect-ratio: 16/9;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .elementor-swiper-button-prev {
+        left: var(--gap-x-small) !important;
+    }
+    .elementor-swiper-button-next {
+        right: var(--gap-x-small) !important;
+    }
+}
+
+// block - featured map //
+.block-featured-map {
+    .elementor-widget-dce-dynamic-osm-map {
+        pointer-events: none;
+    }
+
+    svg {
+        color: var( --e-global-color-text ) !important;
+    }
+}
+
+// block - featured video //
+.block-featured-video {
+    .component-video {
+        .elementor-custom-embed-play {
+            svg {
+                width: calc( 5 * var(--height-base) );
+                height: calc( 5 * var(--height-base) );
+                color: var( --e-global-color-85a1542 );
+            }
+        }
+    }
+}
+
+// block - footer //
+.block-footer {
+    &-about {
+         .component-logo {
+            --height-base: 5em;
+
+            svg {
+                display: block;
+                width: auto;
+                height: var(--height-base);
+
+                .tree {
+                    opacity: .6;
+                    fill: var(--e-global-color-primary);
+                }
+
+                .lettering {
+                    fill: var(--e-global-color-secondary);
+                }
+            }
+        }
+    }
+
+    &-menus {}
+
+    &-certifications {
+        .item {
+            --height-base: 3em;
+            --gap-xx-small: .25em;
+
+            img {
+                display: block;
+                width: auto;
+                height: var(--height-base);
+            }
+        }
+    }
+
+    &-locations {
+        .item {
+            .elementor-widget-icon-list {
+                svg {
+                    color: var(--e-global-color-secondary);
+                }
+            }
+        } 
+
+        @include for-phone-only {
+
+        }
+    }
+
+    &-copyright {}
+}
+
+// block - header //
+.block-header {
+    .component-logo {
+        --height-base: 4em;
+
+        @include for-big-desktop-up {
+            --height-base: 5em;
+        }
+
+        svg {
+            display: block;
+            width: auto;
+            height: var(--height-base);
+
+            .tree {
+                fill: var(--e-global-color-primary);
+            }
+
+            .lettering {
+                fill: var(--e-global-color-accent);
+            }
+        }
+    }
+}
+
+// block - inner navigation //
+.block-inner-navigation {}
+
+// block - page headline //
+.block-page-headline {
+    --height-base: calc( 100vh - ( 2 * var(--gap-vertical-small) + ( 2.5em + 4em )  ) );
+
+    height: var(--height-base);
+
+    @include for-tablet-portrait-only {
+        --height-base: calc( 66vh - ( 2 * var(--gap-vertical-small) + ( 3em + 4em )  ) );
+    }
+
+    @include for-big-desktop-up {
+        --height-base: calc( 100vh - ( 2 * var(--gap-vertical-small) + ( 2.5em + 5em )  ) );
+    }
+
+    @include for-phone-only {
+        --height-base: calc( 100vh - ( 2 * var(--gap-vertical-small) + 4em  ) );
+    }
+
+    // background //
+    &.hero {
+        &-background {
+            .component-headings {
+                .component-button-scroll-down {
+                    opacity: .75 !important;
+                }
+            }
+
+            .component-imagery {
+                &-image {}
+
+                &-video {}
+            }
+        }
+    }
+
+    // right side //
+    &.hero {
+        &-right-side {
+            .component-headings {}
+
+            .component-imagery {
+                &-image {}
+
+                &-video {}
+            }
+        }
+    }
+}
+
+// block - pre-header //
+.block-pre-header {
+    --height-base: 2.5em;
+    
+    .component-the-group {
+        .elementor-widget-icon-list {
+            svg {
+                margin-right: 0 !important;
+            }
+        }
+    }
+}
+
+// block - spacer //
+.block-spacer {
+    &-sustainability {
+        --spacer-size: calc( 6 * var(--height-base) );
+    }
+
+    &-footer {}
+
+    &-footer-copyright {
+        --spacer-size: calc( .5 * var(--height-base) );
+    }
+}

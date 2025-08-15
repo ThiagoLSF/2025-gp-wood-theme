@@ -1,0 +1,82 @@
+// typography //
+:root {
+    // size //
+    --font-size-regular: 1em;
+
+    --font-size-xx-small: .7em;
+    --font-size-x-small: .85em;
+    --font-size-small: .9em;
+    
+    --font-size-large: 1.25em;
+    --font-size-x-large: 2em;
+    --font-size-xx-large: 3em;
+    
+    // line height //
+    --line-height-regular: 1.45;
+    --line-height-small: 1.25;
+    --line-height-large: 1.75;
+
+    --line-height-text: var(--line-height-regular);
+}
+
+@include for-phone-only {
+    :root {
+        // size //
+        --font-size-regular: 1em;
+
+        --font-size-xx-small: .85em;
+        --font-size-x-small: .85em;
+        --font-size-small: .95em;
+        
+        --font-size-x-large: 1.5em;
+        --font-size-xx-large: 2em;
+    }
+}
+
+@include for-tablet-portrait-only {
+    :root {
+        // size //
+        --font-size-regular: .9em;
+        --font-size-xx-large: 3em;
+    }
+}
+
+@include for-tablet-landscape-only {
+    :root {
+        // size //
+        --font-size-xx-large: 3em;
+    }
+}
+
+@include for-big-desktop-up {
+    :root {
+        --font-size-regular: 1.1em;
+
+        --font-size-xx-small: .8em;
+        --font-size-x-small: .9em;
+        --font-size-small: 1em;
+        
+        --font-size-large: 1.4em;
+        --font-size-x-large: 2.2em;
+        --font-size-xx-large: 4.2em;
+    }
+}
+
+// style //
+body {
+    //font-size: calc(1rem + 0.25vw);
+    //https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/
+
+    //font-size: calc( (12px + (18 - 12) * ((100vw - 320px) / (1600 - 320))) );
+    //font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); 
+}
+
+p {
+    // clear elemementor default margins //
+    margin-block-end: 0;
+    margin-block-start: 0;
+
+    &+p {
+        margin-top: var(--gap-regular);
+    }
+}

@@ -1,0 +1,100 @@
+// component - breadcrumbs //
+.component-breadcrumbs {}
+
+// component - buttons //
+.component-buttons {}
+
+.component-button {
+    &-primary,
+    &-secondary {
+    }
+
+    &-scroll-down {
+        font-size: 80%;
+    }
+}
+
+// component - headings //
+.component-headings {}
+
+.component-heading {
+    &-primary,
+    &-secondary {
+        text-wrap: balance;
+    }
+}
+
+// component - imagery //
+.component-imagery {
+    &-image,
+    &-video,
+    &-mosaic {
+    }
+
+    &-mosaic {
+        .component-grid {
+            .item {
+                aspect-ratio: 1/1;
+            }
+        }
+    }
+}
+
+// component - menu // 
+.component-menu {
+    // header //
+    &-header {}
+
+    // header - contact //
+    &-header-contact {}
+
+    // footer //
+    &-footer {
+        @include for-phone-only {
+            ul {
+                li {
+                    a {
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // footer - contact //
+    &-footer-contact {
+        @include for-phone-only {
+            ul {
+                li {
+                    a {
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // social //
+    &-footer-social {
+        svg {
+            margin-right: var(--gap-x-small);
+            font-size: var(--font-size-x-small);
+        }
+
+        @include for-phone-only {
+            ul {
+                li {
+                    a {
+                        justify-content: center;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    // copyright //
+    &-copyright {}
+}

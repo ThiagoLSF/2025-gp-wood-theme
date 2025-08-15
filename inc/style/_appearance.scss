@@ -1,0 +1,25 @@
+// appearance //
+:root {
+    --spacer-size: calc( 2 * var(--height-base) );
+
+    --border-width-base: 1px;
+
+    --border-radius-small: 2px;
+    --border-radius-regular: 1em;
+    --border-radius-large: 2em;
+    --border-radius-x-large: 4em;
+}
+
+@include for-phone-only {
+    :root {
+        --border-width-base: 1px;
+        --border-radius-x-large: 2em;
+    }
+}
+
+@include for-tablet-portrait-only {
+    :root {
+        --border-radius-large: 1.5em;
+        --border-radius-x-large: 2em;
+    }
+}

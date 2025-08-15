@@ -1,0 +1,121 @@
+// layout //
+:root {
+    // base //
+    --hold-max-width: 1200px;
+    --height-base: 2em;
+
+    // space //
+    --gap-regular: 1.75em;
+
+    --gap-xx-small: .25em;
+    --gap-x-small: 1em;
+    --gap-small: 1.25em;
+
+    --gap-large: 2.5em;
+    --gap-x-large: 3.5em;
+    --gap-xx-large: 4em;
+
+    // horizontal - left, right //
+    --gap-horizontal: 8em;
+
+    // vertical - top, bottom //
+    --gap-vertical: 3em;
+    --gap-vertical-small: 1.5em;
+    --gap-vertical-large: 6em;
+    --gap-vertical-x-large: 8em;
+
+    // width //
+    --width-1: 16.667%;
+    --width-2: 33.334%;
+    --width-3: 50%;
+    --width-4: 66.668%;
+    --width-5: 83.335%;
+    --width-6: 100%;
+
+    // fix width //
+    --width-1-vw: 16.667vw;
+    --width-2-vw: 33.334vw;
+    --width-3-vw: 50vw;
+    --width-4-vw: 66.668vw;
+    --width-5-vw: 83.335vw;
+    --width-6-vw: 100vw;
+
+    // fix height //
+    --height-1-vh: 16.667vh;
+    --height-2-vh: 33.334vh;
+    --height-3-vh: 50vh;
+    --height-4-vh: 66.668vh;
+    --height-5-vh: 83.335vh;
+    --height-6-vh: 100vh;
+}
+
+@include for-phone-only {
+    :root {
+        // space //
+        --gap-regular: 2em;
+
+        //--gap-xx-small: .5em;
+        --gap-x-small: .75em;
+        --gap-small: 1em;
+
+        --gap-large: 2.5em;
+        --gap-x-large: 3em;
+        --gap-xx-large: 3.5em;
+
+        // horizontal - left, right //
+        --gap-horizontal: 2em;
+
+        // vertical - top, bottom //
+        --gap-vertical: 2em;
+        --gap-vertical-small: 1.5em;
+        --gap-vertical-large: 3em;
+        --gap-vertical-x-large: 6em;
+    }
+}
+
+@include for-tablet-portrait-only {
+    :root {
+        // space //
+        --gap-regular: 2em;
+
+        --gap-xx-small: .5em;
+        --gap-x-small: .75em;
+        --gap-small: 1em;
+
+        --gap-large: 3em;
+        --gap-x-large: 4em;
+        --gap-xx-large: 5em;
+
+        // horizontal - left, right //
+        --gap-horizontal: 3em;
+
+        // vertical - top, bottom //
+        --gap-vertical: 2em;
+        --gap-vertical-small: 1em;
+        --gap-vertical-large: 3em;
+        --gap-vertical-x-large: 6em;
+    }
+}
+
+@include for-tablet-landscape-only {
+    :root {
+        // horizontal - left, right //
+        --gap-horizontal: 3em;
+
+        // vertical - top, bottom //
+        --gap-vertical: 2em;
+        --gap-vertical-small: 1em;
+        --gap-vertical-large: 4em;
+        --gap-vertical-x-large: 6em;
+    }
+}
+
+@include for-big-desktop-up {
+    :root {
+        // space //
+        //--gap-regular: 2.2em;
+
+        // horizontal - left, right //
+        //--gap-horizontal: 16em;
+    }
+}

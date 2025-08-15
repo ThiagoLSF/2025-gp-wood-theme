@@ -1,0 +1,67 @@
+@import 'mixins';
+@import 'reset';
+
+@import 'appearance';
+@import 'layout';
+@import 'typography';
+
+@import 'blocks';
+@import 'components';
+
+// base //
+html,
+body {
+	overflow-x: hidden !important;
+}
+
+body {
+	a {
+		cursor: pointer;
+		text-decoration: none;
+	}
+
+	img {
+		display: block;
+		width: 100%;
+		height: auto;
+		margin: 0;
+		padding: 0;
+	}
+}
+
+/*
+::selection {
+	color: var(--color-selection);
+	background-color: var(--color-background-selection);
+}
+::-moz-selection {
+	color: var(--color-selection);
+	background-color: var(--color-background-selection);
+}
+*/
+
+// display screen orientation //
+.display-landscape {
+    @include for-screen-portrait {
+        display: none !important;
+    }
+}
+
+.display-portrait {
+    @include for-screen-landscape {
+        display: none !important;
+    }
+}
+
+// -- elementor -- //
+
+// elementor - icon list - fix overflow //
+.elementor-widget.elementor-icon-list--layout-inline .elementor-widget-container {
+	overflow: initial !important;
+}
+
+// elementor - fix embed video play icon opacity //
+.elementor-custom-embed-play i,
+.elementor-custom-embed-play svg {
+    opacity: 1 !important;
+}
