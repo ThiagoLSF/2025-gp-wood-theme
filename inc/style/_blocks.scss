@@ -58,7 +58,7 @@ header ~ .elementor {
         //border: 5px solid red;
     }
 
-    .component-loop-info {
+    .component-loop-features {
         //border: 5px solid red;
 
         .component-item {
@@ -79,7 +79,7 @@ header ~ .elementor {
                 overflow: inherit;
 
                 video {
-                    border-radius: var(--border-radius-large);
+                    //border-radius: var(--border-radius-large);
                 }
             }
         }
@@ -109,7 +109,6 @@ header ~ .elementor {
     .elementor-widget-image-carousel {
         .elementor-image-carousel-wrapper {
             overflow: hidden;
-            border-radius: var(--border-radius-x-large);
 
             img {
                 aspect-ratio: 16/9;
@@ -142,9 +141,9 @@ header ~ .elementor {
     .component-video {
         .elementor-custom-embed-play {
             svg {
-                width: calc( 5 * var(--height-base) );
-                height: calc( 5 * var(--height-base) );
-                color: var( --e-global-color-85a1542 );
+                width: calc( 4 * var(--height-base) );
+                height: calc( 4 * var(--height-base) );
+                color: var( --e-global-color-secondary ) !important;
             }
         }
     }
