@@ -365,9 +365,9 @@ header ~ .elementor[data-elementor-type=wp-page], header ~ .elementor[data-eleme
 }
 
 .block-featured-video .component-video .elementor-custom-embed-play svg {
-  width: calc(5 * var(--height-base));
-  height: calc(5 * var(--height-base));
-  color: var(--e-global-color-secondary);
+  width: calc(4 * var(--height-base));
+  height: calc(4 * var(--height-base));
+  color: var(--e-global-color-secondary) !important;
 }
 
 .block-footer-about .component-logo {
