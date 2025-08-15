@@ -339,16 +339,11 @@ header ~ .elementor[data-elementor-type=wp-page], header ~ .elementor[data-eleme
 .block-content-2 .elementor-widget-video .elementor-widget-container, .block-content-3 .elementor-widget-video .elementor-widget-container {
   overflow: inherit;
 }
-.block-content-2 .elementor-widget-video .elementor-widget-container video, .block-content-3 .elementor-widget-video .elementor-widget-container video {
-  border-radius: var(--border-radius-large);
-}
-
 .block-featured-gallery {
   --height-base: 3em;
 }
 .block-featured-gallery .elementor-widget-image-carousel .elementor-image-carousel-wrapper {
   overflow: hidden;
-  border-radius: var(--border-radius-x-large);
 }
 .block-featured-gallery .elementor-widget-image-carousel .elementor-image-carousel-wrapper img {
   aspect-ratio: 16/9;
@@ -372,7 +367,7 @@ header ~ .elementor[data-elementor-type=wp-page], header ~ .elementor[data-eleme
 .block-featured-video .component-video .elementor-custom-embed-play svg {
   width: calc(5 * var(--height-base));
   height: calc(5 * var(--height-base));
-  color: var(--e-global-color-85a1542);
+  color: var(--e-global-color-secondary);
 }
 
 .block-footer-about .component-logo {
