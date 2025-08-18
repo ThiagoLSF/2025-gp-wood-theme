@@ -5,7 +5,7 @@
         {
             "key": "field_6877eccb0afd5",
             "label": "Page Headline",
-            "name": "",
+            "name": "page_headline",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -19,15 +19,40 @@
             "clone": [
                 "group_block_page_headline"
             ],
-            "display": "seamless",
+            "display": "group",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0,
-            "acfe_seamless_style": 0,
+            "acfe_seamless_style": 1,
             "acfe_clone_modal": 0,
             "acfe_clone_modal_close": 0,
             "acfe_clone_modal_button": "",
             "acfe_clone_modal_size": "large"
+        },
+        {
+            "key": "field_689f9415f1974",
+            "label": "(Column Fill)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "fill",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
         },
         {
             "key": "field_6877ec0d1a736",
@@ -64,23 +89,6 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_6877ecb30afd4",
-            "label": "Attributes",
-            "name": "",
-            "aria-label": "",
-            "type": "acfe_post_field",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "field_type": "attributes",
-            "allow_in_bindings": 0
-        },
-        {
             "key": "field_6877ec0d1a744",
             "label": "Slug",
             "name": "",
@@ -98,9 +106,100 @@
             "allow_in_bindings": 0
         },
         {
+            "key": "field_689f942cf1975",
+            "label": "(Column Fill)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "fill",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
+        },
+        {
+            "key": "field_6877ecb30afd4",
+            "label": "Attributes",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_post_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "attributes",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_689f9431f1976",
+            "label": "(Column Endpoint)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "endpoint": 1,
+            "border_endpoint": [
+                "endpoint"
+            ],
+            "allow_in_bindings": 0,
+            "columns": "6\/12",
+            "border": ""
+        },
+        {
+            "key": "field_689f87f488cf8",
+            "label": "Page Content",
+            "name": "page_content",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_block_page_content"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
             "key": "field_689ef43df477d",
             "label": "Featured Gallery",
-            "name": "",
+            "name": "featured_gallery",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -114,20 +213,20 @@
             "clone": [
                 "group_block_featured_gallery"
             ],
-            "display": "seamless",
+            "display": "group",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0,
-            "acfe_seamless_style": 0,
+            "acfe_seamless_style": 1,
             "acfe_clone_modal": 0,
             "acfe_clone_modal_close": 0,
             "acfe_clone_modal_button": "",
             "acfe_clone_modal_size": "large"
         },
         {
-            "key": "field_689ef46a6ec4a",
+            "key": "field_689f9781f535d",
             "label": "Featured Video",
-            "name": "",
+            "name": "featured_video",
             "aria-label": "",
             "type": "clone",
             "instructions": "",
@@ -141,11 +240,11 @@
             "clone": [
                 "group_block_featured_video"
             ],
-            "display": "seamless",
+            "display": "group",
             "layout": "block",
             "prefix_label": 0,
             "prefix_name": 0,
-            "acfe_seamless_style": 0,
+            "acfe_seamless_style": 1,
             "acfe_clone_modal": 0,
             "acfe_clone_modal_close": 0,
             "acfe_clone_modal_button": "",
@@ -166,9 +265,7 @@
     "style": "seamless",
     "label_placement": "top",
     "instruction_placement": "label",
-    "hide_on_screen": [
-        "permalink"
-    ],
+    "hide_on_screen": "",
     "active": true,
     "description": "",
     "show_in_rest": 1,
@@ -179,5 +276,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755247780
+    "modified": 1755290456
 }

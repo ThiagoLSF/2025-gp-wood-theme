@@ -48,7 +48,10 @@
             },
             "columns": "fill",
             "endpoint": 0,
-            "border": "",
+            "border": [
+                "column",
+                "fields"
+            ],
             "allow_in_bindings": 0,
             "border_endpoint": [
                 "endpoint"
@@ -57,7 +60,7 @@
         {
             "key": "field_686a8cae5535f",
             "label": "Featured Video",
-            "name": "featured_video",
+            "name": "featured_video_file",
             "aria-label": "",
             "type": "file",
             "instructions": "",
@@ -73,7 +76,7 @@
             "preview_style": "default",
             "library": "all",
             "upload_folder": "",
-            "button_label": "Add File",
+            "button_label": "Add Video",
             "file_count": 0,
             "multiple": 0,
             "max": "",
@@ -138,7 +141,10 @@
             },
             "columns": "fill",
             "endpoint": 0,
-            "border": "",
+            "border": [
+                "column",
+                "fields"
+            ],
             "allow_in_bindings": 0,
             "border_endpoint": [
                 "endpoint"
@@ -236,5 +242,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1751889299
+    "modified": 1755290123
 }

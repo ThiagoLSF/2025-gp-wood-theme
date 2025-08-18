@@ -1,6 +1,29 @@
 <?php
 // thumbnails //
 add_theme_support( 'post-thumbnails' );
+add_filter( 'big_image_size_threshold', '__return_false' );
+
+add_action('init', 'theme_remove_image_sizes');
+function theme_remove_image_sizes() {
+    $keep_sizes = [
+        'thumbnail',
+        'medium',
+        'medium_large',
+        'large',
+        'full'
+    ];
+
+    global $_wp_additional_image_sizes;
+    $all_sizes = array_keys($_wp_additional_image_sizes);
+    $default_sizes = ['thumbnail', 'medium', 'medium_large', 'large'];
+    $all_sizes = array_merge($all_sizes, $default_sizes);
+    
+    foreach ($all_sizes as $size) {
+        if (!in_array($size, $keep_sizes)) {
+            remove_image_size($size);
+        }
+    }
+}
 
 // media default sizes //
 update_option( 'thumbnail_size_w', 500 );

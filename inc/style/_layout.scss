@@ -8,7 +8,7 @@
     --gap-regular: 1.75em;
 
     --gap-xx-small: .25em;
-    --gap-x-small: 1em;
+    --gap-x-small: .75em;
     --gap-small: 1.25em;
 
     --gap-large: 2.5em;
@@ -16,12 +16,12 @@
     --gap-xx-large: 4em;
 
     // horizontal - left, right //
-    --gap-horizontal: 8em;
+    --gap-horizontal: 6em;
 
     // vertical - top, bottom //
     --gap-vertical: 3em;
     --gap-vertical-small: 1.5em;
-    --gap-vertical-large: 6em;
+    --gap-vertical-large: 4em;
     --gap-vertical-x-large: 8em;
 
     // width //
@@ -63,7 +63,7 @@
         --gap-xx-large: 3.5em;
 
         // horizontal - left, right //
-        --gap-horizontal: 2em;
+        --gap-horizontal: 1em;
 
         // vertical - top, bottom //
         --gap-vertical: 2em;
@@ -91,7 +91,7 @@
 
         // vertical - top, bottom //
         --gap-vertical: 2em;
-        --gap-vertical-small: 1em;
+        --gap-vertical-small: 1.5em;
         --gap-vertical-large: 3em;
         --gap-vertical-x-large: 6em;
     }
@@ -116,6 +116,6 @@
         //--gap-regular: 2.2em;
 
         // horizontal - left, right //
-        //--gap-horizontal: 16em;
+        --gap-horizontal: 15vw;
     }
 }

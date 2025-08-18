@@ -11,11 +11,7 @@ function theme_remove_smartcrawl_metabox_post_types() {
 
 	$post_id = (int) $_GET['post'];
 	$post_types = array(
-		'award_certification',
-		'client',
 		'document',
-		'team_member',
-		'testimonial'
 	);
 
 	if ( ! in_array( get_post_type( $post_id ), $post_types ) ) {
@@ -31,11 +27,7 @@ function theme_hide_smartcrawl_seo_details_post_types() {
 	global $typenow;
 
 	$post_types = array(
-		'award_certification',
-		'client',
 		'document',
-		'team_member',
-		'testimonial'
 	);
 
 	if ( in_array( $typenow, $post_types ) ) {
@@ -49,11 +41,7 @@ function theme_disable_visual_editor_post_types( $default ) {
 	global $post_type;
 
 	$post_types = array(
-		'award_certification',
-		'client',
 		'document',
-		'team_member',
-		'testimonial'
 	);
 
 	if ( in_array( $post_type, $post_types ) ) {
@@ -68,11 +56,7 @@ function theme_hide_editor_tools_post_types() {
 	global $post_type;
 
 	$post_types = array(
-		'award_certification',
-		'client',
 		'document',
-		'team_member',
-		'testimonial'
 	);
 
 	if ( in_array( $post_type, $post_types ) ) {

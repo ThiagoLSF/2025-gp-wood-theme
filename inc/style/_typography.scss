@@ -9,11 +9,11 @@
     
     --font-size-large: 1.25em;
     --font-size-x-large: 2em;
-    --font-size-xx-large: 3em;
+    --font-size-xx-large: 3.5em;
     
     // line height //
     --line-height-regular: 1.45;
-    --line-height-small: 1.25;
+    --line-height-small: 1.15;
     --line-height-large: 1.75;
 
     --line-height-text: var(--line-height-regular);
@@ -77,6 +77,6 @@ p {
     margin-block-start: 0;
 
     &+p {
-        margin-top: var(--gap-regular);
+        margin-top: var(--gap-small);
     }
 }

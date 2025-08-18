@@ -53,8 +53,6 @@ function theme_acfe_modules(){
 
     // performance //
     acf_update_setting( 'acfe/modules/performance', 'hybrid' );
-
-    
 }
 
 // custom css panel //

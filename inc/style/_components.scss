@@ -18,9 +18,15 @@
 .component-headings {}
 
 .component-heading {
+    &-primary {
+        text-wrap: balance;
+    }
+
+    &-secondary {
+    }
+
     &-primary,
     &-secondary {
-        text-wrap: balance;
     }
 }
 

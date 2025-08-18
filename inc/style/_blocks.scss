@@ -5,21 +5,22 @@ header ~ .elementor {
         position: relative;
         z-index: 100;
 
-        > .elementor-element {
-            &+.elementor-element:not(:last-of-type) {
+        > .elementor-element:not(:last-of-type) {
+            //&+.elementor-element:not(:last-of-type) {
                 // template //
                 > .elementor-widget {
                     > .elementor-widget-container {
                         > .elementor-template {
                             > .elementor {
                                 > .elementor-element {
-                                   //padding-bottom: var(--gap-vertical-small);
+                                   padding-bottom: var(--gap-vertical-small);
+                                   //border: 1px solid red;
                                 }
                             }
                         }
                     }
                 }
-            }
+            //}
             
             &:last-of-type {
                 // template //
@@ -56,13 +57,30 @@ header ~ .elementor {
 
     .component-sidebar {
         //border: 5px solid red;
-    }
 
-    .component-loop-features {
-        //border: 5px solid red;
+        .component-loop-features {
+            .dce-acf-repeater {
+                display: flex;
+                flex-direction: column;
+                gap: var(--gap-small);
 
-        .component-item {
-            //border: 5px solid red;
+                @include for-phone-only  {
+                    //gap: var(--gap-regular);
+                }
+            }
+
+            .item {
+                .component-imagery {
+                    &-image,
+                    &-video {
+                        aspect-ratio: 16/9;
+                        
+                        @include for-phone-only  {
+                            width: var(--width-4);
+                        }
+                    }
+                }
+            }
         }
     }
 
@@ -104,7 +122,12 @@ header ~ .elementor {
 
 // block - featured gallery //
 .block-featured-gallery {
-    --height-base: 3em;
+    --height-base: 4em;
+
+    @include for-phone-only {
+        --height-base: 2em;
+        --gap-x-small: .25em;
+    }
 
     .elementor-widget-image-carousel {
         .elementor-image-carousel-wrapper {
@@ -119,16 +142,25 @@ header ~ .elementor {
 
     .elementor-swiper-button-prev {
         left: var(--gap-x-small) !important;
+
+        @include for-phone-only {
+        }
     }
     .elementor-swiper-button-next {
         right: var(--gap-x-small) !important;
+
+        @include for-phone-only {
+        }
     }
 }
 
 // block - featured map //
 .block-featured-map {
-    .elementor-widget-dce-dynamic-osm-map {
-        pointer-events: none;
+    .dce-osm-wrapper {
+        border-radius: var(--border-radius-small);
+        pointer-events: auto;
+
+
     }
 
     svg {
@@ -141,9 +173,12 @@ header ~ .elementor {
     .component-video {
         .elementor-custom-embed-play {
             svg {
-                width: calc( 4 * var(--height-base) );
-                height: calc( 4 * var(--height-base) );
+                width: calc( 3 * var(--height-base) );
                 color: var( --e-global-color-secondary ) !important;
+
+                @include for-phone-only {
+                    width: calc( 2 * var(--height-base) );
+                }
             }
         }
     }
@@ -286,6 +321,10 @@ header ~ .elementor {
     --height-base: 2.5em;
     
     .component-the-group {
+        .elementor-heading-title {
+            font-size: var(--font-size-xx-small) !important;
+        }
+
         .elementor-widget-icon-list {
             svg {
                 margin-right: 0 !important;
@@ -297,7 +336,7 @@ header ~ .elementor {
 // block - spacer //
 .block-spacer {
     &-sustainability {
-        --spacer-size: calc( 6 * var(--height-base) );
+        --spacer-size: calc( 10 * var(--height-base) );
     }
 
     &-footer {}
@@ -306,3 +345,4 @@ header ~ .elementor {
         --spacer-size: calc( .5 * var(--height-base) );
     }
 }
+
