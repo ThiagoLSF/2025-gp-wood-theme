@@ -1,5 +1,55 @@
 // component - breadcrumbs //
-.component-breadcrumbs {}
+.component-breadcrumbs {
+    .smartcrawl-breadcrumbs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: var(--gap-x-small);
+
+        font-family: var( --e-global-typography-accent-font-family ), Sans-serif;
+        font-size: var(--font-size-x-small);
+        font-weight: var( --e-global-typography-accent-font-weight );
+        //text-transform: var( --e-global-typography-accent-text-transform );
+        text-transform: uppercase;
+        letter-spacing: var( --e-global-typography-accent-letter-spacing );
+        word-spacing: var( --e-global-typography-accent-word-spacing );
+
+        &, a {
+            color: var(--e-global-color-primary);
+        }
+
+        .smartcrawl-breadcrumb {
+            &-separator {
+
+            }
+
+            strong {
+                color: var(--e-global-color-text);
+                font-weight: inherit;
+            }
+        }
+    }
+
+    @at-root {
+        .block-page-headline {
+            &.hero {
+                &-background {
+                    .smartcrawl-breadcrumbs {
+                        &, a {
+                            color: var( --e-global-color-85a1542 );
+
+                            .smartcrawl-breadcrumb {
+                                strong {
+                                    color: var( --e-global-color-85a1542 );
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
 
 // component - buttons //
 .component-buttons {}

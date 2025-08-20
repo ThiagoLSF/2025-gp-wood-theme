@@ -61,13 +61,17 @@ function theme_enqueue_footer_css() {
 }
 
 // enqueue scripts //
-add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts', 90 );
+// add_action( 'wp_enqueue_scripts', 'theme_enqueue_scripts', 90 );
 function theme_enqueue_scripts() {
     global $version_number;
 
     wp_enqueue_script( 'script-header',  get_stylesheet_directory_uri() .'/inc/scripts/script-header.js', null, $version_number);
     wp_enqueue_script( 'script-footer',  get_stylesheet_directory_uri() .'/inc/scripts/script-footer.js', null, $version_number, true );
 }
+
+add_action( 'wp_footer', 'theme_footer_script' );
+function theme_footer_script() { ?>
+<?php }
 
 // favicon and theme //
 //add_action( 'wp_head', 'theme_favicon_theme' );

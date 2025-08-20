@@ -3,6 +3,31 @@
     "title": "Block - Featured Video",
     "fields": [
         {
+            "key": "field_686a924eb8661",
+            "label": "(Column 3\/12)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "3\/12",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
+        },
+        {
             "key": "field_686a93451ea05",
             "label": "Display Featured Video",
             "name": "featured_video_display",
@@ -25,7 +50,7 @@
             "ui": 1
         },
         {
-            "key": "field_686a924eb8661",
+            "key": "field_68a324e373553",
             "label": "(Column Fill)",
             "name": "",
             "aria-label": "",
@@ -242,5 +267,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755290123
+    "modified": 1755522290
 }

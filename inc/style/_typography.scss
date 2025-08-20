@@ -17,6 +17,10 @@
     --line-height-large: 1.75;
 
     --line-height-text: var(--line-height-regular);
+
+    // letter spacing //
+    --letter-spacing-small: .05em;
+
 }
 
 @include for-phone-only {
@@ -51,14 +55,6 @@
 @include for-big-desktop-up {
     :root {
         --font-size-regular: 1.1em;
-
-        --font-size-xx-small: .8em;
-        --font-size-x-small: .9em;
-        --font-size-small: 1em;
-        
-        --font-size-large: 1.4em;
-        --font-size-x-large: 2.2em;
-        --font-size-xx-large: 4.2em;
     }
 }
 
