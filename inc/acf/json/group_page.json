@@ -197,6 +197,33 @@
             "acfe_clone_modal_size": "large"
         },
         {
+            "key": "field_68ac78de0d884",
+            "label": "Page Content 2",
+            "name": "page_content_2",
+            "aria-label": "",
+            "type": "clone",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "clone": [
+                "group_block_content_2"
+            ],
+            "display": "group",
+            "layout": "block",
+            "prefix_label": 0,
+            "prefix_name": 0,
+            "acfe_seamless_style": 1,
+            "acfe_clone_modal": 0,
+            "acfe_clone_modal_close": 0,
+            "acfe_clone_modal_button": "",
+            "acfe_clone_modal_size": "large"
+        },
+        {
             "key": "field_689ef43df477d",
             "label": "Featured Gallery",
             "name": "featured_gallery",
@@ -276,5 +303,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755290456
+    "modified": 1756134414
 }

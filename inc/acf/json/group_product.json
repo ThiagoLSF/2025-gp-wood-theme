@@ -3,6 +3,31 @@
     "title": "Products",
     "fields": [
         {
+            "key": "field_68a7038a019aa",
+            "label": "(Column Fill)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "fill",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
+        },
+        {
             "key": "field_686bec6bac53c",
             "label": "Featured Image",
             "name": "",
@@ -54,7 +79,7 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_686bec6bac547",
+            "key": "field_68a6e21ac73ac",
             "label": "Slug",
             "name": "",
             "aria-label": "",
@@ -69,6 +94,70 @@
             },
             "field_type": "name",
             "allow_in_bindings": 0
+        },
+        {
+            "key": "field_68a7039b019ab",
+            "label": "(Column Fill)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "fill",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
+        },
+        {
+            "key": "field_68a7036441086",
+            "label": "Description",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_post_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "content",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_68a703aa019ac",
+            "label": "(Column Endpoint)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "endpoint": 1,
+            "border_endpoint": [
+                "endpoint"
+            ],
+            "allow_in_bindings": 0,
+            "columns": "6\/12",
+            "border": ""
         }
     ],
     "location": [
@@ -86,7 +175,7 @@
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
-        "the_content"
+        "permalink"
     ],
     "active": true,
     "description": "",
@@ -98,5 +187,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1755256776
+    "modified": 1755775966
 }

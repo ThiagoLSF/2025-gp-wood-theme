@@ -12,6 +12,7 @@ function theme_remove_smartcrawl_metabox_post_types() {
 	$post_id = (int) $_GET['post'];
 	$post_types = array(
 		'document',
+		'product',
 		'elementor_library'
 	);
 
@@ -19,8 +20,31 @@ function theme_remove_smartcrawl_metabox_post_types() {
 		return;
 	}
 
-	remove_action( 'admin_menu', array( Smartcrawl_Metabox::get(), 'smartcrawl_create_meta_box' ) );
+	remove_action( 'admin_menu', array( \SmartCrawl\Admin\Metabox::get(), 'smartcrawl_create_meta_box' ) );
 }
+
+// plugin - smartcrawl - hide in quick edit panel - post types //
+add_action( 'admin_init', 'theme_remove_smartcrawl_quick_edit' );
+function theme_remove_smartcrawl_quick_edit() {
+	global $typenow;
+
+	$post_types = array(
+		'document',
+		'product',
+		'elementor_library'
+	);
+
+	if ( in_array( $typenow, $post_types ) ) {
+		remove_action( 'quick_edit_custom_box', array( \SmartCrawl\Admin\Metabox::get(), 'smartcrawl_quick_edit_dispatch' ), 20 );
+	}
+}
+
+  add_filter( 'wds-metabox-disabled', function( $disabled, $post_type ) {
+    if ( 'document' === $post_type ) {
+        return true;
+    }
+    return $disabled;
+}, 10, 2 );
 
 // plugin - smartcrawl -  hide in post list - post types //
 add_action( 'admin_head-edit.php', 'theme_hide_smartcrawl_seo_details_post_types' );
@@ -29,6 +53,7 @@ function theme_hide_smartcrawl_seo_details_post_types() {
 
 	$post_types = array(
 		'document',
+		'product',
 		'elementor_library'
 	);
 
@@ -44,6 +69,7 @@ function theme_disable_visual_editor_post_types( $default ) {
 
 	$post_types = array(
 		'document',
+		'product',
 		'elementor_library'
 	);
 
@@ -59,7 +85,9 @@ function theme_hide_editor_tools_post_types() {
 	global $post_type;
 
 	$post_types = array(
+		'page',
 		'document',
+		'product',
 		'elementor_library'
 	);
 

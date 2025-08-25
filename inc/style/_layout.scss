@@ -22,7 +22,7 @@
     --gap-vertical: 3em;
     --gap-vertical-small: 1.5em;
     --gap-vertical-large: 4em;
-    --gap-vertical-x-large: 8em;
+    --gap-vertical-x-large: 6em;
 
     // width //
     --width-1: 16.667%;
@@ -52,15 +52,12 @@
 @include for-phone-only {
     :root {
         // space //
-        --gap-regular: 2em;
-
-        //--gap-xx-small: .5em;
-        --gap-x-small: .75em;
+        --gap-regular: 1.5em;
         --gap-small: 1em;
 
-        --gap-large: 2.5em;
+        --gap-large: 2em;
         --gap-x-large: 3em;
-        --gap-xx-large: 3.5em;
+        --gap-xx-large: 3em;
 
         // horizontal - left, right //
         --gap-horizontal: 1em;
@@ -69,10 +66,11 @@
         --gap-vertical: 2em;
         --gap-vertical-small: 1.5em;
         --gap-vertical-large: 3em;
-        --gap-vertical-x-large: 6em;
+        --gap-vertical-x-large: 5em;
     }
 }
 
+/*
 @include for-tablet-portrait-only {
     :root {
         // space //
@@ -119,3 +117,4 @@
         //--gap-horizontal: 15vw;
     }
 }
+*/

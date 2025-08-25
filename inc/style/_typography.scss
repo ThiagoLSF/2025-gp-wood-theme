@@ -1,16 +1,22 @@
 // typography //
 :root {
     // size //
+    --font-size-body: calc( (12px + (17 - 12) * ((100vw - 320px) / (1600 - 320))) );
+    //--font-size-body: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); 
+
     --font-size-regular: 1em;
 
     --font-size-xx-small: .7em;
-    --font-size-x-small: .85em;
+    --font-size-x-small: .8em;
     --font-size-small: .9em;
     
     --font-size-large: 1.25em;
-    --font-size-x-large: 2em;
-    --font-size-xx-large: 3.5em;
-    
+    --font-size-x-large: 1.5em;
+    --font-size-xx-large: 2em;
+
+    --font-heading-x-large: 4em;
+    --font-heading-large: 2.25em;
+
     // line height //
     --line-height-regular: 1.45;
     --line-height-small: 1.15;
@@ -20,23 +26,23 @@
 
     // letter spacing //
     --letter-spacing-small: .05em;
-
 }
 
 @include for-phone-only {
     :root {
         // size //
-        --font-size-regular: 1em;
+        --font-size-body: 16px;
 
-        --font-size-xx-small: .85em;
-        --font-size-x-small: .85em;
-        --font-size-small: .95em;
-        
-        --font-size-x-large: 1.5em;
-        --font-size-xx-large: 2em;
+        --font-size-large: 1.15em;
+        --font-size-x-large: 1.45em;
+        --font-size-xx-large: 1.75em;
+
+        --font-heading-x-large: 2.5em;
+        --font-heading-large: 2em;
     }
 }
 
+/*
 @include for-tablet-portrait-only {
     :root {
         // size //
@@ -54,16 +60,16 @@
 
 @include for-big-desktop-up {
     :root {
-        --font-size-regular: 1.1em;
+        //--font-size-regular: 1.1em;
     }
 }
+*/
 
 // style //
 body {
-    //font-size: calc(1rem + 0.25vw);
+    //font-size: calc(1rem + 0.25vw) !important;
     //https://jameshfisher.com/2024/03/12/a-formula-for-responsive-font-size/
-
-    //font-size: calc( (12px + (18 - 12) * ((100vw - 320px) / (1600 - 320))) );
+    //font-size: calc( (12px + (18 - 12) * ((100vw - 320px) / (1600 - 320))) ) !important;
     //font-size: calc([minimum size] + ([maximum size] - [minimum size]) * ((100vw - [minimum viewport width]) / ([maximum viewport width] - [minimum viewport width]))); 
 }
 

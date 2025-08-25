@@ -74,5 +74,10 @@ function theme_acf_css() { ?>
             padding: 1px !important;
             border: 0 !important;
         }
+
+        /* page history - fields - fix margin top */
+        #acf-group_page_history {
+            margin-top: -20px;
+        }
     </style>
 <?php }

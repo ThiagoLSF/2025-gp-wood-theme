@@ -5,17 +5,18 @@ header ~ .elementor {
         position: relative;
         z-index: 100;
 
-         > .elementor-element {
-            &+.elementor-element:not(:last-of-type) {
+        > .elementor-element:not(:last-of-type) {
+            //&+.elementor-element:not(:last-of-type) {
                 // template //
                 > .elementor-widget {
                     > .elementor-widget-container {
                         > .elementor-template {
                             > .elementor {
                                 > .elementor-element {
-                                     &:not(.block-cta-our-history):not(.block-cta-our-products):not(.block-cta-eirebloc) {
+                                     &:not(.block-content):not(.block-cta-our-history):not(.block-cta-our-products):not(.block-cta-eirebloc):not(.block-cta-documents):not(.block-cta-sustainability):not(.block-featured-gallery) {
                                         @include for-screen-landscape {
-                                            padding-bottom: var(--gap-vertical-small);
+                                            //padding-bottom: var(--gap-vertical-small);
+                                            //border: 1px solid red;
                                         }
                                     }
                                 }
@@ -23,7 +24,7 @@ header ~ .elementor {
                         }
                     }
                 }
-            }
+            //}
 
             /*
             &:nth-child(2) {
@@ -41,17 +42,17 @@ header ~ .elementor {
                 }
             }
             */
-            
-            &:last-of-type {
-                // template //
-                > .elementor-widget {
-                    > .elementor-widget-container {
-                        > .elementor-template {
-                            > .elementor {
-                                > .elementor-element {
-                                    &:not(.block-cta-our-history):not(.block-cta-our-products):not(.block-cta-eirebloc) {
-                                        padding-bottom: var(--gap-vertical-x-large);
-                                    }
+        }
+
+        > .elementor-element:last-of-type {
+            // template //
+            > .elementor-widget {
+                > .elementor-widget-container {
+                    > .elementor-template {
+                        > .elementor {
+                            > .elementor-element {
+                                &:not(.block-cta-our-history):not(.block-cta-our-products):not(.block-cta-eirebloc):not(.block-cta-our-locations):not(.block-featured-gallery) {
+                                    //padding-bottom: var(--gap-vertical-x-large);
                                 }
                             }
                         }
@@ -64,9 +65,78 @@ header ~ .elementor {
 
 // -- //
 
+// block - container, templates //
+.block-container {
+    &-template {
+        &-content {
+            &-2 {
+
+            }
+        }
+
+        &-contact-form {}
+        
+        &-cta-documents {}
+
+        &-cta-eirebloc {}
+        
+        &-cta-our-locations {}
+        
+        &-cta-our-products {}
+        
+        &-cta-our-history {}
+        
+        &-cta-sustainability {}
+
+        &-featured-gallery {}
+
+        &-featured-map {}
+        
+        &-featured-video {}
+
+        &-loop-documents {
+            ~ .block-container-template-featured-gallery {
+                .elementor-element {
+                    padding-top: 0 !important;
+                }
+            }
+        }
+
+        &-loop-products {}
+
+        &-timeline {}
+    }
+
+    > .elementor-element:not(:last-of-type) {
+        &:not(.block-container-template-content):not(.block-container-template-cta-documents):not(.block-container-template-cta-eirebloc):not(.block-container-template-cta-our-locations):not(.block-container-template-cta-our-products):not(.block-container-template-cta-our-history):not(.block-container-template-featured-gallery) {
+            //@include for-screen-landscape {
+                padding-bottom: 0;
+                //border: 1px solid red;
+            //}
+        }
+    }
+
+    > .elementor-element:last-of-type {
+        &:not(.block-container-template-content):not(.block-container-template-cta-documents):not(.block-container-template-cta-eirebloc):not(.block-container-template-cta-our-locations):not(.block-container-template-cta-our-products):not(.block-container-template-cta-our-history):not(.block-container-template-featured-gallery) {
+            //@include for-screen-landscape {
+                padding-bottom: var(--gap-vertical-x-large);
+            //}
+        }
+    }
+}
+
+// -- //
+
 // block - anchor intro //
 .block-anchor-intro {
     --height-base: 1px;
+}
+
+// block - contact form //
+.block-contact-form {
+    .component-form {}
+
+    .component-sidebar {}
 }
 
 // block - content //
@@ -91,7 +161,7 @@ header ~ .elementor {
                 }
             }
 
-            .item {
+            &-item {
                 .component-imagery {
                     &-image,
                     &-video {
@@ -106,8 +176,7 @@ header ~ .elementor {
         }
     }
 
-    &-2,
-    &-3 {
+    &-2 {
         //border: 5px solid red;
 
         .component-article {
@@ -119,7 +188,7 @@ header ~ .elementor {
                 overflow: inherit;
 
                 video {
-                    //border-radius: var(--border-radius-large);
+                    border-radius: var(--border-radius-small);
                 }
             }
         }
@@ -263,13 +332,10 @@ header ~ .elementor {
         .item {
             .elementor-widget-icon-list {
                 svg {
+                    height: .8em;
                     color: var(--e-global-color-secondary);
                 }
             }
-        } 
-
-        @include for-phone-only {
-
         }
     }
 
@@ -303,6 +369,55 @@ header ~ .elementor {
 
 // block - inner navigation //
 .block-inner-navigation {}
+
+// block - loop documents //
+.block-loop-documents {}
+
+// block - loop products //
+.block-loop-products {
+    .dce-posts-wrapper {
+        //gap: var(--gap-large);
+
+        .dce-post-item {
+            padding: 0 var(--gap-x-small);
+
+            opacity: .75;
+            //transform: scale(.9);
+            transition: all .5s ease-in;
+
+            &.swiper-slide-active {
+                opacity: 1;
+                //transform: scale(1);
+            }
+        }
+    }
+
+    .dce-carousel-controls {
+        .swiper-button {
+            &-right,
+            &-left {
+                --height-base: 4em;
+
+                @include for-phone-only {
+                    --height-base: 2em;
+                }
+
+                width: var(--height-base) !important;
+                height: var(--height-base) !important;
+
+                margin-top: 0 !important;
+            }
+        }
+    }
+
+    .dce-container-navigation {
+        svg {
+            display: block;
+            width: 100%;
+            height: auto !important;
+        }
+    }
+}
 
 // block - page headline //
 .block-page-headline {
@@ -375,14 +490,60 @@ header ~ .elementor {
     &-documents {
         --spacer-size: calc( 5 * var(--height-base) );
     }
-
-    &-sustainability {
-        --spacer-size: calc( 10 * var(--height-base) );
-    }
     
-    &-footer {}
+    &-footer {
+        @include for-phone-only {
+            --spacer-size: calc( 1 * var(--height-base) );
+        }
+    }
 
     &-footer-copyright {
         --spacer-size: calc( .5 * var(--height-base) );
+
+        @include for-phone-only {
+            --spacer-size: calc( .25 * var(--height-base) );
+        }
+    }
+
+    &-sustainability {
+        --spacer-size: calc( 10 * var(--height-base) );
+
+        @include for-phone-only {
+            --spacer-size: calc( 5 * var(--height-base) );
+        }
+    }
+
+    &-welcome {
+        @include for-phone-only {
+            --spacer-size: 3em;
+        }
+    }
+}
+
+// block - timeline //
+.block-timeline {
+    .component-loop-timeline {
+        .dce-acf-repeater {
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap-regular);
+
+            @include for-phone-only  {
+                //gap: var(--gap-regular);
+            }
+        }
+
+        &-item {
+            .component-imagery {
+                &-image,
+                &-video {
+                    aspect-ratio: 1/1;
+                    
+                    @include for-phone-only  {
+                        width: var(--width-4);
+                    }
+                }
+            }
+        }
     }
 }

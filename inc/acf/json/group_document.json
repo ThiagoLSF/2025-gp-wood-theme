@@ -3,6 +3,31 @@
     "title": "Documents",
     "fields": [
         {
+            "key": "field_68a7030159d8d",
+            "label": "(Column Fill)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "fill",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
+        },
+        {
             "key": "field_685702400e8f2",
             "label": "Featured Image",
             "name": "",
@@ -49,6 +74,78 @@
             "multiple": 0,
             "allow_null": 0,
             "bidirectional_target": []
+        },
+        {
+            "key": "field_68a5bfcea66b0",
+            "label": "Post Type",
+            "name": "document_post_type",
+            "aria-label": "",
+            "type": "checkbox",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "choices": {
+                "document": "Documents",
+                "product": "Products",
+                "sustainability": "Sustainability"
+            },
+            "default_value": [],
+            "return_format": "value",
+            "min": "",
+            "max": "",
+            "allow_custom": 0,
+            "allow_in_bindings": 0,
+            "layout": "vertical",
+            "toggle": 0,
+            "save_custom": 0,
+            "custom_choice_button_text": "Add new choice"
+        },
+        {
+            "key": "field_6863e4d916167",
+            "label": "Slug",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_post_field",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "field_type": "name",
+            "allow_in_bindings": 0
+        },
+        {
+            "key": "field_68a7031359d8e",
+            "label": "(Column Fill)",
+            "name": "",
+            "aria-label": "",
+            "type": "acfe_column",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "columns": "fill",
+            "endpoint": 0,
+            "border": [
+                "column",
+                "fields"
+            ],
+            "allow_in_bindings": 0,
+            "border_endpoint": [
+                "endpoint"
+            ]
         },
         {
             "key": "field_685705fddba87",
@@ -99,11 +196,11 @@
             "allow_in_bindings": 0
         },
         {
-            "key": "field_6863e4d916167",
-            "label": "Slug",
+            "key": "field_68a7031d59d8f",
+            "label": "(Column Endpoint)",
             "name": "",
             "aria-label": "",
-            "type": "acfe_post_field",
+            "type": "acfe_column",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -112,8 +209,13 @@
                 "class": "",
                 "id": ""
             },
-            "field_type": "name",
-            "allow_in_bindings": 0
+            "endpoint": 1,
+            "border_endpoint": [
+                "endpoint"
+            ],
+            "allow_in_bindings": 0,
+            "columns": "6\/12",
+            "border": ""
         }
     ],
     "location": [
@@ -128,7 +230,7 @@
     "menu_order": 0,
     "position": "acf_after_title",
     "style": "seamless",
-    "label_placement": "left",
+    "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": [
         "permalink"
@@ -143,5 +245,5 @@
     "acfe_display_title": "",
     "acfe_meta": "",
     "acfe_note": "",
-    "modified": 1751377140
+    "modified": 1755775856
 }
