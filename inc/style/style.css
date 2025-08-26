@@ -508,11 +508,6 @@ header ~ .elementor[data-elementor-type=wp-page] > .elementor-element:not(:last-
 
 .block-loop-products .dce-posts-wrapper .dce-post-item {
   padding: 0 var(--gap-x-small);
-  opacity: 0.75;
-  transition: all 0.5s ease-in;
-}
-.block-loop-products .dce-posts-wrapper .dce-post-item.swiper-slide-active {
-  opacity: 1;
 }
 .block-loop-products .dce-carousel-controls .swiper-button-right, .block-loop-products .dce-carousel-controls .swiper-button-left {
   --height-base: 4em;

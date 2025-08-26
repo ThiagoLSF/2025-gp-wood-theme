@@ -381,12 +381,12 @@ header ~ .elementor {
         .dce-post-item {
             padding: 0 var(--gap-x-small);
 
-            opacity: .75;
-            //transform: scale(.9);
-            transition: all .5s ease-in;
+            //opacity: .75;
+            //transform: scale(.95);
+            //transition: all .5s ease-in;
 
             &.swiper-slide-active {
-                opacity: 1;
+                //opacity: 1;
                 //transform: scale(1);
             }
         }

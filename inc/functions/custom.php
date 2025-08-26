@@ -92,6 +92,6 @@ function theme_hide_editor_tools_post_types() {
 	);
 
 	if ( in_array( $post_type, $post_types ) ) {
-		echo '<style>#wp-content-editor-tools { display: none !important; }</style>';
+		echo '<style>#wp-content-media-buttons { display: none !important; }</style>';
 	}
 }
